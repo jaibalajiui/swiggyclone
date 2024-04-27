@@ -1,0 +1,14 @@
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+@mixin list-reset {
+    height: 0;
+    width: 0;
+    list-style: none;
+    background-color: red;
+
+}
