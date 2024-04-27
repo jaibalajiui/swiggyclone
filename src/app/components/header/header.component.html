@@ -1,1 +1,37 @@
-<p>header works!</p>
+<header class="header">
+    <nav class="header__nav">
+        <ul>
+            <li>
+                <a [routerLink]="['home']">
+                    <img class="header__nav__logo" src="assets/icons/logo.svg" alt="">
+                </a>
+            </li>
+            <li class="header__nav__search-dropdown">
+                <span id="header__nav__search-dropdown__faLocationArrow">
+                    <fa-icon [icon]="fa.LocationArrow"></fa-icon>
+                </span>
+                <a>{{SetupYourPreciseLocation}}</a>
+                <span>
+                    <fa-icon [icon]="fa.ChevronDown"></fa-icon>
+                </span>
+            </li>
+            <li class="header__nav__input" *ngIf="!isDropdowunSearchClicked">
+                <label for="search-bar"></label>
+                <button id="search-bar" (click)="showDropdowunSearch()">{{SearchForRestaurantAndFood}}</button>
+                <span class="icon-gray">
+                    <fa-icon [icon]="fa.MagnifyingGlass"></fa-icon>
+                </span>
+            </li>
+            <li *ngIf="isDropdowunSearchClicked" class="header__nav__input--clicked">
+                <span class="icon-gray">
+                    <fa-icon [icon]="fa.ArrowLeft"></fa-icon>
+                </span>
+                <input type="text" [placeholder]="SearchForRestaurantAndFood">
+            </li>
+            <li class="header__nav__profile">
+                <label for="profile"></label>
+                <a class="header__nav__profile__fa-user"> <fa-icon [icon]="fa.User"></fa-icon></a>
+            </li>
+        </ul>
+    </nav>
+</header>
