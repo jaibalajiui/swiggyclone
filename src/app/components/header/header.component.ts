@@ -10,12 +10,7 @@ import { FaIcons } from '../../shared/enums/fa-icons.enums';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [
-    RouterModule,
-    CommonModule,
-    FormsModule,
-    FontAwesomeModule,
-  ],
+  imports: [RouterModule, CommonModule, FormsModule, FontAwesomeModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
